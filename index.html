@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <title>Roast</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css">
+    <link rel="stylesheet" href="roboto-fontfacekit/webfont.css" type="text/css">
+	
+    <link rel="apple-touch-startup-image" href="images/startup-image.png" sizes="320x460">
+    <link rel="apple-touch-icon" href="images/icon.png" sizes="57x57">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!--Jquery library -->
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <!--Jquery Mobile Java -->
+	<script src="js/behavior.js"></script>
+ 	
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+
+<body>
+<!--Home -->
+<div data-role="page" id="home">
+    <!--<div data-theme="a" data-role="header">
+        <h3>Roast</h3>
+    </div>-->
+    <div data-role="content">
+    	<h1 style="color:#FFF; font-family: RobotoThin; font-weight: normal; font-size: 72px; text-align:right;  margin-top: 100px;margin-bottom:0;">roast</h1>
+        <h2 style="color:#FFF; text-shadow: none; font-family: RobotoLight; font-weight: normal; font-size: 12px; margin-top: 0; text-align:right;">quality coffee recipes</h2>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#hothome" data-role="button" data-icon="flame" data-iconpos="top" data-transition="fade">Hot</a></li>
+                <li><a href="#icedhome" data-role="button" data-icon="snowflake" data-iconpos="top" data-transition="fade">Iced</a></li>
+                <li><a href="#blendedhome" data-role="button" data-icon="blended" data-iconpos="top" data-transition="fade">Blended</a></li>
+            </ul>
+    	</div>
+	</div>
+</div>
+<!--Hot -->
+<div data-role="page" id="hothome" data-add-back-btn="true">
+    <div data-theme="a" data-role="header">
+        <h3>Hot Drinks</h3>
+        <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+    </div>
+    <div data-role="content">
+    	<ul data-role="listview" data-divider-theme="a" data-inset="true" data-filter="true">
+            <li data-role="list-divider" role="heading">
+                Hot Drinks
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_affogato" data-transition="fade">
+                    <img src="images/affogatothumb.jpg" alt="Affogato Image"/>
+                    <h3 class="ui-li-heading">Affogato</h3>
+                    <p class="ui-li-desc">Espresso &amp; Ice Cream</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_americano" data-transition="fade">
+                    <img src="images/americanothumb.jpg" alt="Americano Image"/>
+                    <h3 class="ui-li-heading">Americano</h3>
+                    <p class="ui-li-desc">Espresso &amp; Water</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_aulait" data-transition="fade">
+                    <img src="images/aulaitthumb.jpg" alt="Au Lait Image"/>
+                    <h3 class="ui-li-heading">Au Lait</h3>
+                    <p class="ui-li-desc">Coffee &amp; Milk</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_blackeye" data-transition="fade">
+                    <img src="images/blackeyethumb.jpg" alt="Black Eye Image"/>
+                    <h3 class="ui-li-heading">Black Eye</h3>
+                    <p class="ui-li-desc">Coffee &amp; 2x Shot Espresso</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_breve" data-transition="fade">
+                    <img src="images/brevethumb.jpg" alt="Breve Image"/>
+                    <h3 class="ui-li-heading">Breve</h3>
+                    <p class="ui-li-desc">Espresso &amp; Steamed Half and Half</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_bombon" data-transition="fade">
+                    <img src="images/bombonthumb.jpg" alt="Bombon Image"/>
+                    <h3 class="ui-li-heading">Bomb&oacute;n</h3>
+                    <p class="ui-li-desc">Espresso &amp; Condensed Milk</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_capp" data-transition="fade">
+                    <img src="images/cappthumb.jpg" alt="Cappuccino Image"/>
+                    <h3 class="ui-li-heading">Cappucino</h3>
+                    <p class="ui-li-desc">Espresso, Milk, Milk Foam</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_coffee" data-transition="fade">
+                    <img src="images/coffeethumb.jpg" alt="Coffee Image"/>
+                    <h3 class="ui-li-heading">Coffee</h3>
+                    <p class="ui-li-desc">100% Arabica Beans</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#recipe_cortado" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Cortado Image"/>
+                    <h3 class="ui-li-heading">Cortado</h3>
+                    <p class="ui-li-desc">Espresso &amp; Milk</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+<!--Iced -->
+<div data-role="page" id="icedhome" data-add-back-btn="true">
+    <div data-theme="a" data-role="header">
+        <h3>Iced Drinks</h3>
+        <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+    </div>
+    <div data-role="content">
+    	<ul data-role="listview" data-divider-theme="a" data-inset="true" data-filter="true">
+            <li data-role="list-divider" role="heading">
+                Cold Drinks
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 1</h3>
+                    <p class="ui-li-desc">Drink 1 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 2</h3>
+                    <p class="ui-li-desc">Drink 2 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 3</h3>
+                    <p class="ui-li-desc">Drink 3 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 4</h3>
+                    <p class="ui-li-desc">Drink 4 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 5</h3>
+                    <p class="ui-li-desc">Drink 5 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 6</h3>
+                    <p class="ui-li-desc">Drink 6 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 7</h3>
+                    <p class="ui-li-desc">Drink 7 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 8</h3>
+                    <p class="ui-li-desc">Drink 8 Description</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+<!--Blended -->
+<div data-role="page" id="blendedhome" data-add-back-btn="true">
+    <div data-theme="a" data-role="header">
+        <h3>Blended Drinks</h3>
+        <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+    </div>
+    <div data-role="content">
+    	<ul data-role="listview" data-divider-theme="a" data-inset="true" data-filter="true">
+            <li data-role="list-divider" role="heading">
+                Blended Drinks
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 1</h3>
+                    <p class="ui-li-desc">Drink 1 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 2</h3>
+                    <p class="ui-li-desc">Drink 2 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 3</h3>
+                    <p class="ui-li-desc">Drink 3 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 4</h3>
+                    <p class="ui-li-desc">Drink 4 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 5</h3>
+                    <p class="ui-li-desc">Drink 5 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 6</h3>
+                    <p class="ui-li-desc">Drink 6 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 7</h3>
+                    <p class="ui-li-desc">Drink 7 Description</p>
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="fade">
+                    <img src="images/testthumb.jpg" alt="Filler Image"/>
+                    <h3 class="ui-li-heading">Drink 8</h3>
+                    <p class="ui-li-desc">Drink 8 Description</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+<!--RECIPE AFFOGATO -->
+	<div data-role="page" id="recipe_affogato" data-add-back-btn="true">
+    <div data-theme="a" data-role="header">
+        <h3>Affogato</h3>
+        <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        
+    </div>
+    <div data-role="content">    	
+    	<div data-theme="a" data-content-theme="c" data-role="collapsible">
+   			<h3>Diagram</h3>
+   			<div style="height: 280px;">
+            	Diagram goes here
+            </div>
+		</div>
+		<div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+        	<h3>Recipe</h3>
+            <ul>
+            	<li>1/2 Cup (about 1 scoop) Vanilla Gelato/Ice Cream</li>
+                <li>1 Shot Hot Espresso (1 oz)</li>
+            </ul>
+            <hr>
+            <ol>
+            	<li>Scoop the vanilla gelato into a mug.</li>
+                <li>Pull one shot espresso.</li>
+                <li>Pour espresso over gelato.</li>
+            </ol>
+            
+        </div>
+        
+	</div>
+</div>
+<!--END RECIPE AFFOGATO -->
+
+<!--RECIPES AMERICANO -->
+    <!--12 OZ -->
+    <div data-role="page" id="recipe_americano12" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Americano</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+            
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>1 Shot Hot Espresso (1 oz)</li>
+                    <li>11 oz Hot Water</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Pull one shot of espresso.</li>
+                    <li>Pour espresso into cup.</li>
+                    <li>Top off with hot water.</li>
+                </ol>
+                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_americano12" class="ui-btn-active ui-state-persist">12oz</a></li>
+                    <li><a href="#recipe_americano">16oz</a></li>
+                    <li><a href="#recipe_americano20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--16 OZ -->
+    <div data-role="page" id="recipe_americano" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Americano</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+            
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>2 Shots Hot Espresso (2 oz)</li>
+                    <li>14 oz Hot Water</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Pull two shots of espresso.</li>
+                    <li>Pour espresso into cup.</li>
+                    <li>Top off with hot water.</li>
+                </ol>
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_americano12">12oz</a></li>
+                    <li><a href="#recipe_americano" class="ui-btn-active ui-state-persist">16oz</a></li>
+                    <li><a href="#recipe_americano20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--20 OZ -->
+    <div data-role="page" id="recipe_americano20" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Americano</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>3 Shots Hot Espresso (3 oz)</li>
+                    <li>17 oz Hot Water</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Pull three shots of espresso.</li>
+                    <li>Pour espresso into cup.</li>
+                    <li>Top off with hot water.</li>
+                </ol>
+                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_americano12">12oz</a></li>
+                    <li><a href="#recipe_americano">16oz</a></li>
+                    <li><a href="#recipe_americano20" class="ui-btn-active ui-state-persist">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+<!--END RECIPES AMERICANO -->
+
+<!--START RECIPES AU LAIT -->
+	<!--AuLait 12oz-->
+    <div data-role="page" id="recipe_aulait12" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Au Lait</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>6oz Brewed Coffee</li>
+                    <li>6oz Hot Milk</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Brew coffee and heat milk.</li>
+                    <li>Pour coffee and milk* into mug</li>
+                </ol>
+                <p><em>*For a frothier beverage, blend or briskly whisk the heated milk before pouring.</em></p>
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_aulait12" class="ui-btn-active ui-state-persist">12oz</a></li>
+                    <li><a href="#recipe_aulait">16oz</a></li>
+                    <li><a href="#recipe_aulait20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--AuLait 16oz-->
+    <div data-role="page" id="recipe_aulait" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Au Lait</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>1 cup Brewed Coffee</li>
+                    <li>1 cup Hot Milk</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Brew coffee and heat milk.</li>
+                    <li>Pour coffee and milk* into mug</li>
+                </ol>
+                <p><em>*For a frothier beverage, blend or briskly whisk the heated milk before pouring.</em></p>
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_aulait12">12oz</a></li>
+                    <li><a href="#recipe_aulait" class="ui-btn-active ui-state-persist">16oz</a></li>
+                    <li><a href="#recipe_aulait20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--AuLait 20oz-->
+    <div data-role="page" id="recipe_aulait20" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Au Lait</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>10oz Brewed Coffee</li>
+                    <li>10oz Hot Milk</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Brew coffee and heat milk.</li>
+                    <li>Pour coffee and milk* into mug</li>
+                </ol>
+                <p><em>*For a frothier beverage, blend or briskly whisk the heated milk before pouring.</em></p>
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_aulait12">12oz</a></li>
+                    <li><a href="#recipe_aulait">16oz</a></li>
+                    <li><a href="#recipe_aulait20" class="ui-btn-active ui-state-persist">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+<!--END RECIPES AU LAIT -->
+
+<!--START RECIPES BLACK EYE -->
+	<!--BlackEye 12oz-->
+    <div data-role="page" id="recipe_blackeye12" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Black Eye</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>2 Shots Hot Espresso (2oz)</li>
+                    <li>10oz Drip Coffee</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Brew coffee.</li>
+                    <li>Pull 2 shots of espresso.</li>
+                    <li>Pour coffee and espresso into mug.</li>
+                </ol>
+                
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_blackeye12" class="ui-btn-active ui-state-persist">12oz</a></li>
+                    <li><a href="#recipe_blackeye">16oz</a></li>
+                    <li><a href="#recipe_blackeye20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--BlackEye 16oz-->
+    <div data-role="page" id="recipe_blackeye" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Black Eye</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>2 Shots Hot Espresso (2oz)</li>
+                    <li>14oz Drip Coffee</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Brew coffee.</li>
+                    <li>Pull 2 shots of espresso.</li>
+                    <li>Pour coffee and espresso into mug.</li>
+                </ol>
+                
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_blackeye12">12oz</a></li>
+                    <li><a href="#recipe_blackeye" class="ui-btn-active ui-state-persist">16oz</a></li>
+                    <li><a href="#recipe_blackeye20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--BlackEye 20oz-->
+    <div data-role="page" id="recipe_blackeye20" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Black Eye</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>2 Shots Hot Espresso (2oz)</li>
+                    <li>18oz Drip Coffee</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Brew coffee.</li>
+                    <li>Pull 2 shots of espresso.</li>
+                    <li>Pour coffee and espresso into mug.</li>
+                </ol>
+                
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_blackeye12">12oz</a></li>
+                    <li><a href="#recipe_blackeye">16oz</a></li>
+                    <li><a href="#recipe_blackeye20" class="ui-btn-active ui-state-persist">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+<!--END RECIPES BLACK EYE-->
+
+<!--START RECIPES BREVE-->
+	<!--Breve 12oz-->
+    <div data-role="page" id="recipe_breve12" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Breve</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                    <img src="images/diagrams/breve_d.png" alt="Breve Diagram" />
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>1 Shot Hot Espresso (1oz)</li>
+                    <li>11oz Steamed Half &amp; Half</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Steam half &amp; half.</li>
+                    <li>Pull 1 shot of espresso.</li>
+                    <li>Pour cream and espresso into cup.</li>
+                </ol>
+                
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_breve12" class="ui-btn-active ui-state-persist">12oz</a></li>
+                    <li><a href="#recipe_breve">16oz</a></li>
+                    <li><a href="#recipe_breve20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--Breve 16oz-->
+    <div data-role="page" id="recipe_breve" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Breve</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <img src="images/diagrams/breve_d.png" alt="Breve Diagram" />
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>2 Shots Hot Espresso (2oz)</li>
+                    <li>14oz Steamed Half &amp; Half</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Steam half &amp; half.</li>
+                    <li>Pull 2 shots of espresso.</li>
+                    <li>Pour cream and espresso into cup.</li>
+                </ol>
+                
+                                
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_breve12">12oz</a></li>
+                    <li><a href="#recipe_breve" class="ui-btn-active ui-state-persist">16oz</a></li>
+                    <li><a href="#recipe_breve20">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    <!--Breve 20oz-->
+    <div data-role="page" id="recipe_breve20" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Breve</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                    <img src="images/diagrams/breve_d.png" alt="Breve Diagram" />
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>3 Shots Hot Espresso (3oz)</li>
+                    <li>17oz Drip Coffee</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Steam half &amp; half.</li>
+                    <li>Pull 3 shots of espresso.</li>
+                    <li>Pour cream and espresso into cup.</li>
+                </ol>           
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_breve12">12oz</a></li>
+                    <li><a href="#recipe_breve">16oz</a></li>
+                    <li><a href="#recipe_breve20" class="ui-btn-active ui-state-persist">20oz</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+<!--END RECIPES BREVE-->
+
+<!--START RECIPES BOMBON-->
+    <div data-role="page" id="recipe_bombon" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Bomb&oacute;n</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>1/2 Espresso</li>
+                    <li>1/2 Condensed Milk</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Pour condensed milk into cup until half-full.</li>
+                    <li>Pull shot(s) of espresso.</li>
+                    <li>Pour espresso on top of milk until cup is completely full.</li>
+                </ol>
+                                
+            </div>
+            
+        </div>
+        
+    </div>
+<!--END RECIPES BOMBON-->
+
+<!--START RECIPES CAPPUCINO-->
+	
+    <!--Cap 16oz-->
+    <div data-role="page" id="recipe_capp" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Cappuccino</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Diagram goes here
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li><sup>1</sup>&frasl;<sub>3</sub> Espresso</li>
+                    <li><sup>1</sup>&frasl;<sub>3</sub> Steamed Milk</li>
+                    <li><sup>1</sup>&frasl;<sub>3</sub> Milk Foam</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Pull espresso shots and pour into cup.</li>
+                    <li>Steam milk while ensuring maximum foamage.</li>
+                    <li>Pour milk &amp; foam mixture into cup.</li>
+                </ol>
+                <p><em>This drink is usually served in a small porcelain cup. <br>Up for a challenge? Try adding a bit of flair to your coffee-making and create artwork in the milk foam.</em></p>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+<!--END RECIPES CAPPUCINO-->
+
+<!--START RECIPES COFFEE-->
+
+	<div data-role="page" id="recipe_coffee" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Coffee</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Diagram</h3>
+                <div style="height: 280px;">
+                    Youtube Video
+                </div>
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>4cup:3Tbsp Ratio of Hot Water to Ground Coffee</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Grind coffee beans (if whole beans are purchased).</li>
+                    <li>Scoop the appropriate amount of grounds into a coffee filter</li>
+                    <li>Place filter into basket.</li>
+                    <li>Measure the appropriate amount of water.</li>
+                    <li>Pour into reservoir.</li>
+                    <li>Activate Coffee Maker.</li>
+                </ol>
+           
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_coffee" class="ui-btn-active ui-state-persist">Coffee Maker</a></li>
+                    <li><a href="#recipe_coffeefrench">French Press</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+    
+    <!--COFFEE - FRENCH PRESS -->
+    <div data-role="page" id="recipe_coffeefrench" data-add-back-btn="true">
+        <div data-theme="a" data-role="header">
+            <h3>Coffee</h3>
+            <a href="#home" class="ui-btn-right" data-role="button" data-icon="home" data-iconpos="left" data-mini="true">Home</a>
+        </div>
+        <div data-role="content">
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible">
+                <h3>Video</h3>
+                
+                   <iframe width="280" height="158" src="http://www.youtube.com/embed/RHhn4U2Lnf4?rel=0" frameborder="0" allowfullscreen></iframe>
+                
+            </div>
+            
+            <div data-theme="a" data-content-theme="c" data-role="collapsible" data-collapsed="false">
+                <h3>Recipe</h3>
+                <ul>
+                    <li>1cup:2tbsp Ratio of Hot Water to Ground Coffee</li>
+                </ul>
+                <hr>
+                <ol>
+                    <li>Grind coffee beans (if whole beans are purchased).</li>
+                    <li>Scoop the appropriate amount of grounds into the press</li>
+                    <li>Heat the appropriate amount of water.</li>
+                    <li>Pour into french press.</li>
+                    <li>Let steep for 1 &ndash; 2 minutes.</li>
+                    <li>Press grounds to the bottom</li>
+                    <li>Pour coffee into mug.</li>
+                </ol>
+                             
+            </div>
+            
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#recipe_coffee">Coffee Maker</a></li>
+                    <li><a href="#recipe_coffeefrench" class="ui-btn-active ui-state-persist">French Press</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+
+<!--END RECIPES COFFEE-->
+
+<!--START RECIPES CORTADO-->
+<!--END RECIPES CORTADO-->
+
+
+</body>
+</html>

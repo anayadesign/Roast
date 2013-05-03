@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {}
+
+div[data-role="page"] {
+	background-image: url(../images/woodgrain.jpg);
+		background-repeat: no-repeat;
+		background-size:cover;
+		background-color: none;
+		background-position: center;
+		background-attachment:fixed;
+		/*padding-top: 20px;*/
+		}
+div[data-role="header"]{position:fixed; width: 100%; z-index:200;}
+div[data-role="content"]{margin-top: 45px;}
+div[data-role="footer"]{position:fixed; bottom: 0;}
+
+div.custom-content-c {
+	margin: 0 -8px;
+	padding: 10px 16px;
+	background-color: #fff;
+	border-radius: .6em;
+}
+
+.ui-icon-flame {
+	background-image: url("../images/flame.png");
+}
+.ui-icon-snowflake {
+	background-image: url("../images/snowflake.png");
+}
+.ui-icon-blended {
+	background-image: url("../images/blended.png");
+}
+
+
+#recipe_affogato {
+ background-image: url("../images/affogatobg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_americano, #recipe_americano12, #recipe_americano20 {
+ background-image: url("../images/americanobg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_aulait, #recipe_aulait12, #recipe_aulait20 {
+ background-image: url("../images/aulaitbg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_blackeye, #recipe_blackeye12, #recipe_blackeye20 {
+ background-image: url("../images/blackeyebg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_breve, #recipe_breve12, #recipe_breve20 {
+ background-image: url("../images/brevebg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_bombon {
+ background-image: url("../images/brevebg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_capp {
+ background-image: url("../images/cappbg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_coffee {
+ background-image: url("../images/coffeebg.jpg");
+ background-repeat: no-repeat;	
+}
+#recipe_coffeefrench {
+ background-image: url("../images/coffeefrenchbg.jpg");
+ background-repeat: no-repeat;	
+}
